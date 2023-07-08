@@ -37,9 +37,9 @@
 
 </head>
 
-<body class="sub_page">
+<body >
 
-  <div class="hero_area">
+<div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="header_top">
@@ -72,7 +72,7 @@
             <a class="navbar-brand" href="index.html">
               <img src="images/logo.png" alt="">
             </a>
-            </a>
+
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
@@ -81,7 +81,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
-                  <li class="nav-item ">
+                  <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
@@ -96,7 +96,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="testimonial.html">Testimonial</a>
                   </li>
-                  <li class="nav-item active">
+                  <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
                 </ul>
@@ -125,54 +125,17 @@
         </div>
       </div>
     </header>
-    <!-- end header section -->
-  </div>
-
-
-  <!-- contact section -->
-  <section class="contact_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-7">
-          <div class="form_container">
-            <form action="getintouch.php"  method="post">
-              <div>
-                <input type="text" name = "fullName" placeholder="Full Name" />
-              </div>
-              <div>
-                <input type="email" name = "email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" name = "Phone" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="text"  name = "number" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="img-box">
-            <img src="images/contact-img.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end contact section -->
-
-  <!-- info section -->
-  <section class="info_section ">
+    <div class="getintouch" style=" display: flex; justify-content: center; margin-top: 200px; margin-bottom: 200px;" >
+    <?php 
+ if( $_POST['fullName'] && $_POST['email'] &&  $_POST['Phone'] && $_POST['number']) {
+    echo " Your form is submetted";
+ 
+ }else{
+     echo"Please fill in the missing field to complete the form";
+ }
+ ?>
+</div>
+<section class="info_section ">
     <div class="container">
       <div class="info_top">
         <div class="info_logo">
@@ -236,7 +199,7 @@
                 Useful link
               </h5>
               <div class="info_links_menu">
-                <a href="index.html">
+                <a class="active" href="index.html">
                   Home
                 </a>
                 <a href="about.html">
@@ -251,7 +214,7 @@
                 <a href="testimonial.html">
                   Testimonial
                 </a>
-                <a class="active" href="contact.html">
+                <a href="contact.html">
                   Contact us
                 </a>
               </div>
@@ -312,10 +275,7 @@
     </div>
   </section>
   <!-- end info_section -->
-
-
-  <!-- footer section -->
-  <footer class="footer_section">
+<footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
@@ -340,5 +300,18 @@
 
 
 </body>
+  
 
+
+</body>
 </html>
+
+ 
+<!-- 
+//  if( $_POST['fullName'] && $_POST['email'] &&  $_POST['Phone'] && $_POST['number']) {
+//     echo "Your form is submetted";
+ 
+//  }else{
+//      echo"Please fill in the missing field to complete the form";
+//  } -->
+
