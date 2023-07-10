@@ -11,6 +11,10 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <?php
+    require "variables.php";
+    require "functiontreatment.php";
+  ?>
 
   <title>Mico</title>
 
@@ -82,22 +86,22 @@
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
                   <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html"> About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="treatment.html">Treatment</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="doctor.html">Doctors</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">Testimonial</a>
+                    <a class="nav-link" href="about.php"> About</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="treatment.php">Treatment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="doctor.php">Doctors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="testimonial.php">Testimonial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -129,47 +133,15 @@
   </div>
 
 
-  <!-- contact section -->
-  <section class="contact_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-7">
-          <div class="form_container">
-            <form action="getintouch.php"  method="post">
-              <div>
-                <input type="text" name = "fullName" placeholder="Full Name" />
-              </div>
-              <div>
-                <input type="email" name = "email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" name = "Phone" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="text"  name = "number" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div class="img-box">
-            <img src="images/contact-img.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- treatment section -->
+
+  <section class="treatment_section layout_padding">
+  <?php  
+  treatment ($treatment);
+  ?>
   </section>
-  <!-- end contact section -->
+
+  <!-- end treatment section -->
 
   <!-- info section -->
   <section class="info_section ">
@@ -242,7 +214,7 @@
                 <a href="about.html">
                   About
                 </a>
-                <a href="treatment.html">
+                <a href="treatment.html" class="active">
                   Treatment
                 </a>
                 <a href="doctor.html">
@@ -251,7 +223,7 @@
                 <a href="testimonial.html">
                   Testimonial
                 </a>
-                <a class="active" href="contact.html">
+                <a href="contact.html">
                   Contact us
                 </a>
               </div>
