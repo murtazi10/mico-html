@@ -11,6 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+ 
 
   <title>Mico</title>
 
@@ -37,9 +38,9 @@
 
 </head>
 
-<body class="sub_page">
+<body >
 
-  <div class="hero_area">
+<div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="header_top">
@@ -72,7 +73,7 @@
             <a class="navbar-brand" href="index.html">
               <img src="images/logo.png" alt="">
             </a>
-            </a>
+
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> </span>
@@ -81,23 +82,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
-                  <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html"> About</a>
-                  </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="treatment.html">Treatment</a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="doctor.html">Doctors</a>
+                    <a class="nav-link" href="about.php"> About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">Testimonial</a>
+                    <a class="nav-link" href="treatment.php">Treatment</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="doctor.php">Doctors</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="testimonial.php">Testimonial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -125,103 +126,49 @@
         </div>
       </div>
     </header>
-    <!-- end header section -->
-  </div>
+    <div class="getintouch" style=" display: flex; align-items: center; justify-content: center; margin-top: 200px; margin-bottom: 200px;" >
+    <?php 
+    $inputPatientName = $_POST['inputPatientName'];
+
+if (preg_match('/^[A-Za-z]+$/', $inputPatientName)) {
+    echo 'Name -  ' . $inputPatientName . "<br>";
+}
+
+if($_POST['inputDoctorName'] = 'Normal distribution')  {
+    echo  'Doctor -  ' . $_POST['inputDoctorName'] . "  <br>" ;
+}
 
 
-  <!-- treatment section -->
 
-  <section class="treatment_section layout_padding">
-    <div class="side_img">
-      <img src="images/treatment-side-img.jpg" alt="">
-    </div>
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Hospital <span>Treatment</span>
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Nephrologist Care
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Eye Care
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Pediatrician Clinic
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Parental Care
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+if($_POST['inputDepartmentName'] = 'Normal distribution')  {
+    echo  ' Departament  -  ' . $_POST['inputDepartmentName'] . "  <br>" ;
+}
 
-  <!-- end treatment section -->
+$inputPhone = $_POST['inputPhone'];
+if (preg_match('/^[0-9]+$/', $inputPhone)) {
+    echo 'Number  -  ' .  $inputPhone . "<br>";
+}
 
-  <!-- info section -->
-  <section class="info_section ">
+$inputSymptoms = $_POST['inputSymptoms'];
+
+if (preg_match('/^[A-Za-z ]+$/', $inputSymptoms)) {
+    echo ' Symptoms -' . $inputSymptoms . " <br>";
+}
+
+if($_POST['birthday']) {
+    echo 'Date - ' . $_POST['birthday'] . '<br>';
+}
+
+if( $_POST['inputPatientName'] && $_POST['inputDoctorName'] &&  $_POST['inputDepartmentName'] && $_POST['inputPhone'] && $_POST['inputSymptoms'] && $_POST['birthday']) {
+    echo "Your reservation has been selected";
+ 
+ }else{
+     echo"Please fill in the missing field to complete the booking";
+ } 
+
+ ?>
+</div>
+<section class="info_section ">
     <div class="container">
       <div class="info_top">
         <div class="info_logo">
@@ -285,13 +232,13 @@
                 Useful link
               </h5>
               <div class="info_links_menu">
-                <a href="index.html">
+                <a class="active" href="index.html">
                   Home
                 </a>
                 <a href="about.html">
                   About
                 </a>
-                <a href="treatment.html" class="active">
+                <a href="treatment.html">
                   Treatment
                 </a>
                 <a href="doctor.html">
@@ -361,10 +308,7 @@
     </div>
   </section>
   <!-- end info_section -->
-
-
-  <!-- footer section -->
-  <footer class="footer_section">
+<footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
@@ -389,5 +333,15 @@
 
 
 </body>
+  
 
+
+</body>
 </html>
+
+
+ 
+
+ 
+ 
+  
